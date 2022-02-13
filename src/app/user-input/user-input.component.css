@@ -1,0 +1,10 @@
+#whatToSearch{
+    margin-top: 50px;
+    border-radius: 6px;
+    border: none;
+}
+button{
+    border-radius: 6px;
+    border: none;  
+    margin-left: 7px;
+}

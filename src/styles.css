@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 *{
   color: white;
+  font-size: 22px;
+  padding-left: 100px;
 }
 body{
   background-image: url(./assets/images/gitb3.jpeg); 
@@ -10,4 +12,7 @@ body{
 }
 .overlay{
     background: rgb(0, 0, 0, .5);
+}
+button{
+  color: black;
 }
