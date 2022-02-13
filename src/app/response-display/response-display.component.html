@@ -1,32 +1,38 @@
-<div class="container" >
-    <app-user-input (Value)="findThisUser($event)"></app-user-input>
-    <hr />
-    <div *ngIf="user;repo">
-      <div id="all-content" class="row">
-        <div class="col-md-8">
-          <h2 class="bg-white text-center">Repositories:</h2>
-          <div class="card">
+<div class="container">
+  <app-user-input (Value)="findThisUser($event)"></app-user-input>
+  <hr />
+  <div *ngIf="user; repo">
+    <div id="all-content" class="row">
+      <div class="col-md-8">
+        <h2 class="bg-white text-center">Repositories:</h2>
+        <div class="card">
+          <ol>
+            <li *ngFor="let repo of repo">
+              <h3 appHighlight class="card-title">
+                {{ repo.name | titlecase }}
+              </h3>
+              <p class="card">{{ repo.description }}</p>
+              <p id="language">{{ repo.language }}</p>
+              <p>{{ repo.created_at | ageFinder }}</p>
+              <button class="btn">
+                <a
+                  href="{{ repo.html_url }}"
+                  class="btn btn-success"
+                  target="_blank"
+                  >View Repo</a
+                >
+              </button>
+            </li>
+          </ol>
 
-            <ol>
-              <li *ngFor="let repo of repo">
-                <h3 appHighlight class="card-title" >{{ repo.name | titlecase }}</h3>
-                <p class="card">{{ repo.description }}</p>
-                <p id='language'>{{ repo.language }}</p>
-                <p>{{repo.created_at | ageFinder}}</p>
-                <button class="btn">
-                  <a href="{{ repo.html_url  }}" class="btn btn-success" target="_blank" >View Repo</a>
-                </button>
-              </li>
-            </ol>
-
-            <hr />
-          </div>
+          <hr />
         </div>
-        <div class="user-info col-md-4 text-white">
-          <h2>User-Info</h2>
-          <p>{{ user.login }}</p> 
-          <i>{{user.public_repos}}</i>
-        </div>
+      </div>
+      <div class="user-info col-md-4 text-white">
+        <h2>User-Info</h2>
+        <p>{{ user.login }}</p>
+        <i>{{ user.public_repos }}</i>
       </div>
     </div>
   </div>
+</div>
