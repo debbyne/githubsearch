@@ -1,3 +1,4 @@
+import { Repository } from './../repository';
 import { Component, OnInit } from '@angular/core';
 import { GithubserviceService } from '../services/githubservice.service';
 import { User } from '../user';
@@ -9,6 +10,7 @@ import { User } from '../user';
 })
 export class ResponseDisplayComponent implements OnInit {
   user?: User;
+  repo!:Repository | any
 
   constructor(private gitService: GithubserviceService) { 
     //repo
@@ -17,13 +19,13 @@ export class ResponseDisplayComponent implements OnInit {
     this.gitService.findUser(whatToSearch).then((success) => {
       this.user = this.gitService.user
     })
-    // this.gitService.showRepositories(whatToSearch).then((success) => {
-    //   this.repository = this.gitService.repository;
-    // },
-    //   (error) => {
-    //     console.log(error)
-    //   }
-    // )
+    this.gitService.userRepos(whatToSearch).then((success) => {
+      this.repo = this.gitService.repo;
+    },
+      (error) => {
+        console.log(error)
+      }
+    )
   }
 
   ngOnInit(): void {
