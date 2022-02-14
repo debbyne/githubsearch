@@ -1,3 +1,4 @@
+
 import { Directive ,ElementRef,HostListener} from '@angular/core';
 
 @Directive({
@@ -6,15 +7,15 @@ import { Directive ,ElementRef,HostListener} from '@angular/core';
 export class HighlighterDirective {
 
   constructor(private elem: ElementRef) { }
-  private textDeco(action: string) {
-    this.elem.nativeElement.style.color = action;
+  private Highlighter(color: string) {
+    this.elem.nativeElement.style.backgroundColor = color;
   }
 
   @HostListener("click") onClicks() {
-    this.textDeco("red")
+    this.Highlighter("red")
   }
 
   @HostListener("dblclick") onDoubleClicks() {
-    this.textDeco("yellow")
+    this.Highlighter("yellow")
   }
 }

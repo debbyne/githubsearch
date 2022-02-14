@@ -10,9 +10,9 @@
       </div>
       <div class="col-md">
         <h2 class="bg-white text-center">Repositories:</h2>
-        <div class="card" textDeco>
+        <div class="card">
           <ol>
-            <li *ngFor="let repo of repo">
+            <li *ngFor="let repo of repo" appHighlighter>
               <h3 appHighlight class="card-title">
                 {{ repo.name | titlecase }}
               </h3>
