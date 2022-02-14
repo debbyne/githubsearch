@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { ResponseDisplayComponent } from './response-display/response-display.component';
 import { UserInputComponent } from './user-input/user-input.component';
 import { AgeFinderPipe } from './age-finder.pipe';
+import { HighlighterDirective } from './highlighter.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResponseDisplayComponent,
     UserInputComponent,
-    AgeFinderPipe
+    AgeFinderPipe,
+    HighlighterDirective
   ],
   imports: [
     BrowserModule,

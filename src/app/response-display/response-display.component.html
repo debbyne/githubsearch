@@ -3,9 +3,14 @@
   <hr />
   <div *ngIf="user; repo">
     <div id="all-content" class="row">
-      <div class="col-md-8">
+      <div class="user-info col-md text-black">
+        <h2>User-Info</h2>
+        <p>{{ user.login }}</p>
+        <i>{{ user.public_repos }}</i>
+      </div>
+      <div class="col-md">
         <h2 class="bg-white text-center">Repositories:</h2>
-        <div class="card">
+        <div class="card" textDeco>
           <ol>
             <li *ngFor="let repo of repo">
               <h3 appHighlight class="card-title">
@@ -19,7 +24,7 @@
                   href="{{ repo.html_url }}"
                   class="btn btn-success"
                   target="_blank"
-                  >View Repo</a
+                  >View Repository</a
                 >
               </button>
             </li>
@@ -27,11 +32,6 @@
 
           <hr />
         </div>
-      </div>
-      <div class="user-info col-md-4 text-black">
-        <h2>User-Info</h2>
-        <p>{{ user.login }}</p>
-        <i>{{ user.public_repos }}</i>
       </div>
     </div>
   </div>
