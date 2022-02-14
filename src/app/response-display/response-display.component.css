@@ -7,3 +7,7 @@ button{
     border-radius: 6px;
     border: none; 
 }
+.row{
+    display: flex;
+    justify-content: space-between;
+}
