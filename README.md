@@ -1,7 +1,17 @@
 # Githubsearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
+# Author
+Debbyne Kinya
 
+# Description
+A website where users can search for other github users or their repositories by entering their name or name of repository on the form and pressing the search button
+
+# Technologies Used
+ANGULAR CLI
+BOOTSTRAP
+
+#Setup
+To access this project locally in your machine,use the command: $ git clone https://github.com/debbyne/githubsearch.git to clone to your machine.
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
