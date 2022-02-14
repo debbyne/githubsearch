@@ -16,3 +16,7 @@ body{
 button{
   color: black;
 }
+.row{
+  display: flex;
+  justify-content: space-between;
+}

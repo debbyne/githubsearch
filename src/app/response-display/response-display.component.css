@@ -11,3 +11,6 @@ button{
     display: flex;
     justify-content: space-between;
 }
+card{
+    margin-left: 50px;
+}

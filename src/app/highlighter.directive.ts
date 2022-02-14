@@ -11,11 +11,11 @@ export class HighlighterDirective {
     this.elem.nativeElement.style.backgroundColor = color;
   }
 
-  @HostListener("click") onClicks() {
-    this.Highlighter("red")
+  @HostListener("mouseenter") onMouseEnter() {
+    this.Highlighter("orange")
   }
 
-  @HostListener("dblclick") onDoubleClicks() {
-    this.Highlighter("yellow")
+  @HostListener("mouseleave") onMouseLeave() {
+    this.Highlighter("")
   }
 }
