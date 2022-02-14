@@ -9,8 +9,15 @@ button{
 }
 .row{
     display: flex;
-    justify-content: space-between;
+    margin-left: 20px;
+   
 }
-card{
-    margin-left: 50px;
+
+
+.col1 {
+    width: 30%;
+}
+
+.col2{
+    width: 65%;
 }

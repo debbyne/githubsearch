@@ -2,8 +2,8 @@
   <app-user-input (Value)="findThisUser($event)"></app-user-input>
   <hr />
   <div *ngIf="user; repo">
-    <div id="all-content" class="row">
-      <div class="user-info col-md text-black">
+    <div class="row">
+      <div class="user-info col1 text-black">
         <h2>User-Info</h2>
         <img src="{{user.avatar_url}}" alt="" height="200px">
         <p>{{ user.login }}</p>
@@ -12,7 +12,7 @@
         <p>Repositories: {{ user.public_repos }}</p>
         
       </div>
-      <div class="col-md">
+      <div class="col2">
         
         <div class="card">
           <ol>
